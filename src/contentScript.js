@@ -30,7 +30,7 @@ fileSelector.setAttribute('type', 'file');
 // PSS 31-07-2021 added new function to scrape consistency tool
 document.addEventListener("keydown", function (event) {
 
-    if (event.altKey && (event.key === 'c' || event.key === 'C')) {
+    if (event.altKey && event.shiftKey && (event.key === '&')) {
 
         event.preventDefault();
         scrapeconsistency();
