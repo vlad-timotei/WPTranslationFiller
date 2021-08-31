@@ -1,4 +1,4 @@
-function scrapeconsistency() {
+function scrapeconsistency(locale) {
 	var currentLocation = window.location;
 	var wind;
 	wind = "myWindow";

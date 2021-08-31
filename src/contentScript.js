@@ -33,7 +33,12 @@ document.addEventListener("keydown", function (event) {
     if (event.altKey && event.shiftKey && (event.key === '&')) {
 
         event.preventDefault();
-        scrapeconsistency();
+        chrome.storage.sync
+            .get(
+                ['destlang'],
+                function (data) {
+                    scrapeconsistency(data.destlang);
+                });
     }
 });
 // PSS 29-07-2021 added a new function to replace verbs from the command line, or through a script collecting the links issue #111
